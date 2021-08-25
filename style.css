@@ -1,0 +1,879 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+/* font-family: 'Space Grotesk', sans-serif;
+font-family: 'Work Sans', sans-serif; */
+
+h3, h4, button, .btn {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: bold;
+}
+
+p, li, label, :placeholder-shown {
+  font-family: "Work Sans", sans-serif;
+}
+
+/* This section is needed for the navbar to stay on top of the content */
+
+html, body {
+  overflow-x: hidden;
+  height: 100%;
+}
+
+/* Here you can find the styling for Header */
+
+.header {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 100%;
+  box-shadow: none;
+  background-color: #607033;
+  position: fixed;
+  height: 60px !important;
+  overflow: hidden;
+  z-index: 10;
+}
+
+.header__icon {
+  margin-left: 20px;
+  color: #e9e0d8;
+  z-index: 10;
+}
+
+.header__logo {
+  display: flex;
+  flex-direction: row;
+}
+
+.header__logo:hover {
+  transition: all 0.2s ease-out;
+  transform: scale(1.2);
+}
+
+.header__logo-image {
+  width: 35px;
+  margin-right: 20px;
+}
+
+.header__logo-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: #e9e0d8;
+}
+
+/* Here you can find the styling for Navbar */
+
+#navbarmenu {
+  height: 100%;
+  position: fixed;
+  left: 0;
+  width: 200px;
+  margin-top: 60px;
+  transform: translateX(-250px);
+  transition: transform 250ms ease-in-out;
+  background: linear-gradient(180deg, #607033 0%, #dce4b4 100%);
+}
+
+.header__navbar-list {
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.header__navbar-list li {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  color: #e9e0d8;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 20px;
+  cursor: pointer;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.header__navbar-list li a {
+  color: #e9e0d8;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.header__navbar-list li a:hover {
+  transition: all 0.2s ease-out;
+  transform: scale(1.3);
+}
+
+input[type="checkbox"]:checked~#navbarmenu {
+  transform: translateX(0);
+}
+
+input[type="checkbox"] {
+  transition: all 0.3s;
+  box-sizing: border-box;
+  display: none;
+}
+
+.sidebarlogotoggle {
+  transition: all 0.3s;
+  box-sizing: border-box;
+  cursor: pointer;
+  position: absolute;
+  z-index: 99;
+  height: 100%;
+  width: 100%;
+  top: 5px;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Here you can find the styling for Hero Image */
+
+.header__heroimg {
+  background: center no-repeat url("./images/hero\ image/hero1.jpg");
+  height: 500px;
+  background-size: cover;
+}
+
+/* Here you can find the styling for About Section */
+
+.section__about {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  scroll-margin-top: 30px;
+}
+
+.section__about-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  background: #c3aa97;
+  margin: 30px;
+  border-radius: 10px;
+  box-shadow: 4px 4px 8px 4px rgba(0, 0, 0, 0.383);
+}
+
+.section__about-title {
+  margin: 30px;
+}
+
+.section__about-paragraph {
+  text-align: center;
+  margin: 10px;
+  max-width: 800px;
+  height: 150px;
+}
+
+/* I did not need media queries 
+*/
+
+/*Nisha*/
+
+/*generic styling*/
+
+.section__farm {
+  scroll-margin-top: 70px;
+}
+
+.section__farm h3, .section__alpacas h3, .section__alpacas h4 {
+  margin: 30px;
+  text-align: center;
+}
+
+.section__alpacas h3 {
+  line-height: 30px;
+}
+
+.section>* {
+  margin-top: 1.5rem;
+}
+
+.farm-card .img:hover, .alpacas-card .img:hover {
+  box-shadow: 5px 10px 15px #607033;
+}
+
+/*styling for farm card */
+
+.farm-card .img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.farm-card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.section__farm {
+  margin: 2.5rem;
+}
+
+.farm-card, .farm-card .img {
+  border-radius: 10px;
+}
+
+/*styling for alpacas card */
+
+.section__alpacas {
+  scroll-margin-top: 70px;
+}
+
+.alpacas-card .img {
+  border-radius: 50%;
+  display: block;
+  object-fit: cover;
+  width: 95%;
+  height: 95%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.alpacas-card {
+  width: 13em;
+  height: 13em;
+}
+
+.section__alpacas-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(13em, 1fr));
+  grid-gap: 1rem;
+  margin: 2rem;
+}
+
+.alpacas-card-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0;
+}
+
+.section__alpacas-card1 {
+  grid-area: 1/1/2/2;
+}
+
+.section__alpacas-card2 {
+  grid-area: 1/2/2/3;
+}
+
+.section__alpacas-card3 {
+  grid-area: 2/1/3/2;
+}
+
+.section__alpacas-card4 {
+  grid-area: 2/2/3/3;
+}
+
+.section__alpacas-card5 {
+  grid-area: 3/1/4/2;
+}
+
+.section__alpacas-card6 {
+  grid-area: 3/2/4/3;
+}
+
+/*Nisha*/
+
+/*Rahmonjon Ibragimov- Guided tours*/
+
+.section__tours {
+  scroll-margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  background: linear-gradient(310deg, #c3aa97 0%, #dacabe77 100%);
+}
+
+.headline {
+  text-align: center;
+  margin: 30px;
+}
+
+.container-for-all {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.most-booked__text {
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px;
+  margin-right: 35px;
+  margin-left: -20px;
+  background: #dce4b4;
+}
+
+.card__h2 {
+  display: inline-block;
+}
+
+.card-guide {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 4px 4px 8px 4px rgba(0, 0, 0, 0.383);
+  background-color: transparent;
+  padding: 20px;
+  margin: 30px;
+  height: 600px;
+  width: 350px;
+}
+
+/* This is not looking good together with navbar
+
+} */
+
+.card-guide h4, .most-booked__wrapper h4 {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.texts {
+  list-style: url("./images/logo/alpaca-2.svg");
+  padding: 0 0 20px 40px;
+}
+
+.card__anchor {
+  padding: 1rem 5rem;
+  margin: 1.2rem;
+  border-radius: 10px;
+  background-color: #dce4b4;
+  border: none;
+  outline: none;
+}
+
+.card__anchor a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: black;
+  font-size: 0.7rem;
+}
+
+.card__anchor:hover {
+  background: #607033;
+  color: #e9e0d8;
+}
+
+.card-guide__button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+/*Rahmonjon ends in here*/
+
+/* Heydar */
+
+.section__catchphrase {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.section__catchphrase-content {
+  background: #c3aa97;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  align-items: center;
+  box-shadow: 4px 4px 8px 4px rgba(0, 0, 0, 0.383);
+}
+
+.section__catchphrase-content p {
+  max-width: 800px;
+  margin: 30px;
+}
+
+.section__catchphrase-btn {
+  padding: 1rem 5rem;
+  margin: 1.2rem;
+  border-radius: 10px;
+  background-color: #dce4b4;
+  border: none;
+  outline: none;
+}
+
+.section__catchphrase-btn a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: black;
+  font-size: 0.7rem;
+}
+
+.section__catchphrase-btn:hover {
+  background: #607033;
+  color: #e9e0d8;
+}
+
+.section__shop {
+  margin: 3rem;
+  scroll-margin-top: 70px;
+}
+
+.section__shop-title {
+  text-align: center;
+  margin: 30px;
+}
+
+.section__shop-menu {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 90%;
+  margin: auto;
+}
+
+.section__shop-card {
+  margin: 1rem;
+}
+
+.section__shop-image img {
+  width: 450px;
+}
+
+.nature {
+  height: 300px;
+}
+
+.section__shop-text h3 {
+  text-align: center;
+  margin: 20px;
+}
+
+.section__shop-text {
+  width: 350px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.section__shop-title {
+  text-align: center;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 550px;
+  margin: 0 auto;
+  background: #c3aa97;
+  padding: 0.5rem;
+  border-radius: 10px;
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.wrapper .title h1 {
+  color: black;
+  text-align: center;
+  margin-bottom: 25px;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.contact-form {
+  display: flex;
+}
+
+.input-fields {
+  display: flex;
+  flex-direction: column;
+  margin-right: 4%;
+}
+
+.input-fields, .msg {
+  width: 48%;
+}
+
+.input-fields .input, .msg textarea {
+  margin: 10px 0;
+  background: transparent;
+  border: 0px;
+  border-bottom: 2px solid #dce4b4;
+  padding: 10px;
+  color: #c5ecfd;
+  width: 100%;
+}
+
+.msg textarea {
+  height: 212px;
+}
+
+.msg textarea:focus {
+  outline: none;
+  border: 2px solid #607033;
+  box-shadow: 0 0 10px #719ece;
+}
+
+.input:focus {
+  outline: none;
+  border: 2px solid #607033;
+  box-shadow: 0 0 10px #719ece;
+}
+
+input[type=submit] {
+  color: black;
+  padding: .8rem 4rem;
+  margin: .2rem 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #DCE4B4;
+  border: none;
+  outline: none;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: bold;
+}
+
+input[type=submit]:hover {
+  background: #607033;
+  color: #e9e0d8;
+}
+
+/* .btn {
+  background: #dce4b4;
+  text-align: center;
+  padding: 15px;
+  border-radius: 10px;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  text-transform: uppercase;
+} */
+
+.btn:hover {
+  background: #607033;
+  color: #e9e0d8;
+}
+
+/*This is the first style of form
+
+ .section__form {
+    background-color: #c3aa97 ;
+    padding: 1rem 2rem;
+    width: 90%;
+    margin: 2rem auto;
+    scroll-margin-top: 150px;
+    border-radius: 10px;
+}
+.section__form h3 {
+    text-align: center;
+}
+input[type=text] {
+    width: 100%;
+    padding: .1rem .3rem;
+    margin: .3rem 0;
+    border: 1px solid rgb(169, 154, 154);
+    border-radius: 4px;
+    background-color: #F0EAE5;
+}
+textarea {
+  background-color: #F0EAE5;
+}
+input[type=submit] {
+    color: black;
+    padding: .8rem 4rem;
+    margin: .2rem 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #DCE4B4;
+    border: none;
+    outline: none;
+    font-family:'Space Grotesk', sans-serif;
+    font-weight: bold;
+}
+input[type=submit]:hover {
+  background: #607033;
+  
+}
+input[value=Send]:hover {
+  color: #E9E0D8;
+}
+fieldset {
+  border-radius: 10px;
+  padding: .5rem;
+}
+legend {
+    background-color: #F0EAE5;
+    color: black;
+    font-size: larger;
+    padding: 3px 6px;
+    margin: 0 auto;
+    border-radius: 5px;
+    font-family:'Space Grotesk', sans-serif;
+}
+.form__btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.section__form-textarea {
+    width: 100%;
+    height: 6rem;
+    border-radius: 5px;
+    padding: .2rem .3rem;
+} */
+
+.foo__container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 4rem;
+  width: 100%;
+  padding: 20px;
+  background: linear-gradient(270deg, #607033 0%, #dce4b4 100%);
+}
+
+.social-team__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.team__wrapper, .social__wrapper {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.social__wrapper a {
+  color: #dce4b4;
+}
+
+.team__wrapper h4 {
+  margin: 10px;
+}
+
+.fab {
+  margin: 15px;
+}
+
+.fa-facebook-square:hover, .fa-instagram:hover, .fa-linkedin:hover, .fa-github:hover, .fa-mail-bulk:hover {
+  transition: ease-out 0.3s;
+  transform: scale(2);
+}
+
+.foo__wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.foo__wrapper img {
+  width: 35px;
+  height: 35px;
+  margin-left: 10px;
+}
+
+/* Adding the media queries here */
+
+/* Heydar */
+
+@media screen and (min-width: 480px) and (max-width: 1279px) {
+  .box__image {
+    flex-basis: 300px;
+    flex-shrink: 0;
+    height: auto;
+  }
+  .box__body {
+    flex-shrink: 1;
+  }
+}
+
+@media only screen and (min-width: 481px) {
+  .section__form-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .form__btn {
+    text-align: left;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .contact-form {
+    flex-direction: column;
+  }
+  .msg textarea {
+    height: 80px;
+  }
+  .input-fields, .msg {
+    width: 100%;
+  }
+}
+
+/* Heydar */
+
+/* Brisilda */
+
+@media screen and (max-width: 769px) {
+  .social-team__container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+/* Brisilda */
+
+/* Jon */
+
+@media screen and (min-width: 769px) and (max-width: 1279px) {
+  .container-for-all {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 40px;
+  }
+  .card-guide {
+    max-width: 40%;
+  }
+}
+
+/* Jon */
+
+@media screen and (min-width: 769px) {
+  /*Nisha*/
+  .section__alpacas-wrapper {
+    grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
+  }
+  .section__alpacas-card3 {
+    grid-area: 1/3/2/4;
+  }
+  .section__alpacas-card4 {
+    grid-area: 2/1/3/2;
+  }
+  .section__alpacas-card5 {
+    grid-area: 2/2/3/3;
+  }
+  .section__alpacas-card6 {
+    grid-area: 2/3/3/4;
+  }
+  .section__farm-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+  .section__farm-wrapper {
+    grid-gap: 1.5rem;
+    margin: 5rem;
+    margin-bottom: 0;
+    margin-top: 1.5rem;
+  }
+  .farm-card {
+    margin-top: 0;
+  }
+  .section__farm-card1 {
+    grid-area: 1/1/2/2;
+  }
+  .section__farm-card2 {
+    grid-area: 1/2/2/3;
+  }
+  .section__farm-card3 {
+    grid-area: 2/1/3/2;
+  }
+  .section__farm-card4 {
+    grid-area: 2/2/3/3;
+  }
+  /*Nisha*/
+  /*Heydar*/
+  .section__about-wrapper {
+    width: 60%;
+  }
+  .section__catchphrase-content {
+    width: 60%;
+  }
+  .section__form {
+    padding: 3rem 5rem;
+  }
+  /* Form Flashing ################### */
+  /* .title {
+    animation: blinker 2s linear infinite;
+    text-transform: capitalize;
+  }
+  
+  @keyframes blinker {
+    50% {
+      opacity: 0;
+    }
+  } */
+  /* Heydar */
+}
+
+@media screen and (min-width: 1280px) {
+  /*Nisha*/
+  .alpacas-card {
+    width: 12em;
+    height: 12em;
+    margin-right: 2rem;
+  }
+  .section__alpacas-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 10rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+  }
+  .section__farm-wrapper {
+    grid-gap: 1rem;
+    margin: 10rem;
+    margin-bottom: 0;
+    margin-top: 1.5rem;
+  }
+  .farm-card {
+    width: 28rem;
+    height: auto;
+  }
+  .section__farm-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin: 5rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  /*Nisha*/
+  /* Jon */
+  .acco__boxes {
+    flex-direction: row;
+  }
+  .container-for-all {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 40px;
+  }
+  .card-guide {
+    max-width: 30%;
+  }
+}
+
+/* Jon */
+
+@media screen and (max-width: 479px) {
+  .section__alpacas-wrapper {
+    display: block;
+  }
+}
